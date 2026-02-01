@@ -36,6 +36,11 @@ def tb_file_str():
 `timescale 1ns/1ps
 module tb();
 
+logic clk,rst_n;
+initial clk=0; initial rst_n=0; initial begin #99;rst_n=1;end
+always #1 clk=~clk;
+
+
 
 initial begin
 
